@@ -12,7 +12,7 @@ import (
 
 var (
 	// cleanup functions to execute with Do
-	funcs map[string]func()
+	funcs = make(map[string]func())
 	mu    sync.Mutex // protect funcs from concurrentcy
 )
 
